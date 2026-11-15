@@ -12,20 +12,26 @@ Plain explanations of how Parmana works. Each statement links to the source file
 | [`e771d973`](https://github.com/pavancharak/parmana-core/blob/e771d973/) | `parmana-core` main after PR #645 | The corrected verifier comment |
 | [`4982964e`](https://github.com/pavancharak/parmana-core/blob/4982964e/) | `parmana-core` main after PR #646 | Decision D22 |
 
-## Written so far
+## Pages
 
 - **Declare**
   - [Checks at declare](declare/checks.md): what a request is checked for, in order, and what each refusal returns.
   - [Signals](declare/signals.md): signals are required, checked against the policy's types at declare and at evaluation, and a missing fact is refused.
+- **Authorize**
+  - [The decision steps](authorize/decision-steps.md)
+  - [How a policy is evaluated](authorize/policy-evaluation.md): outcomes, rule order, absent facts, and the operators.
+  - [Which policy version is in effect](authorize/policy-version.md)
+  - [Business validation and sources](authorize/business-validation.md)
+  - [Approval signals and the approval verifier](authorize/approval-verifier.md)
+  - [Hooks](authorize/hooks.md)
+  - [Authorize is a stage of its own (D22)](authorize/stage.md)
+- **Govern**
+  - [The governance anchor](govern/governance-anchor.md)
+- **Prove**
+  - [Ties between approval records](prove/tie-break.md)
+- **Keys**
+  - [The credential holder type](keys/credential-holder-type.md)
+- **Reference**
+  - [Enums: every value and where it is defined](enums.md)
 
-## Not yet written
-
-These are planned, with the source files already identified:
-
-- Authorize: the decision steps, policy evaluation, policy version in effect, business validation, approval verifier, hooks, and the stage decision (D22).
-- Govern: the governance anchor.
-- Prove: the tie-break between approval records.
-- Keys: the credential holder type.
-- Enums: every enum, its values, and where it is defined.
-
-Each source link is checked against its commit before the page is published.
+Each source link is checked against its commit before a page is published.
