@@ -30,8 +30,25 @@ Plain explanations of how Parmana works. Each statement links to the source file
 - **Prove**
   - [Ties between approval records](prove/tie-break.md)
 - **Keys**
+  - [Caller API keys](keys/api-keys.md)
   - [The credential holder type](keys/credential-holder-type.md)
+  - [Step-up keys](keys/step-up-keys.md)
+  - [Signing keys](keys/signing-keys.md)
 - **Reference**
   - [Enums: every value and where it is defined](enums.md)
 
 Each source link is checked against its commit before a page is published.
+
+## More pages
+
+- **Execute**
+  - [The gateway's checks before release](execute/gateway-checks.md)
+- **Prove**
+  - [Verifying an execution record](prove/verification.md)
+- **Refusals**
+  - [Refusals and the audit events they write](refusals/refusal-table.md)
+- **Govern**
+  - [Proposing and approving a policy change](govern/proposal-and-approval.md)
+
+- **Open points**
+  - [Questions the code does not settle yet](open-points.md)

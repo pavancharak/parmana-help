@@ -12,3 +12,10 @@ A request to `POST /transactions` is checked in this order. A refusal stops the 
 Only after these checks does the decision run (see [the decision steps](../authorize/decision-steps.md)).
 
 The full list of steps, with the reasons written in the code, is in [`DECLARE_STAGE.md`](https://github.com/pavancharak/parmana-core/blob/1a977714/docs/DECLARE_STAGE.md).
+
+## Open points
+
+- Whether declare should be one call or two. An owner decision. ([01-declare OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/01-declare/OPEN.md))
+- The contract test for this topic is not merged or run in CI. An owner decision. ([01-declare OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/01-declare/OPEN.md))
+- Whether a tenant refusal should write an audit event. The code writes none and gives no reason. An owner decision. ([01-declare OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/01-declare/OPEN.md))
+- Whether the stored transaction should drop a caller's `policy.contentHash` and `governanceAnchor`. The code keeps them, against a comment in [`RuntimeEngine.ts`](https://github.com/pavancharak/parmana-core/blob/509a47e5/packages/runtime/src/RuntimeEngine.ts). An owner decision. ([FINDINGS 11](https://github.com/pavancharak/finalflowparmana/blob/main/FINDINGS.md))
