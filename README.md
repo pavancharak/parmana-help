@@ -30,7 +30,10 @@ Plain explanations of how Parmana works. Each statement links to the source file
 - **Prove**
   - [Ties between approval records](prove/tie-break.md)
 - **Keys**
+  - [Caller API keys](keys/api-keys.md)
   - [The credential holder type](keys/credential-holder-type.md)
+  - [Step-up keys](keys/step-up-keys.md)
+  - [Signing keys](keys/signing-keys.md)
 - **Reference**
   - [Enums: every value and where it is defined](enums.md)
 
