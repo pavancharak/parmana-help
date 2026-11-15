@@ -20,3 +20,8 @@ A policy change is proposed by one person (the maker) and approved or rejected b
 **What approval does, in order.** The approval service writes the signed approval record first ([`PolicyChangeApprovalService.ts`](https://github.com/pavancharak/parmana-core/blob/509a47e5/packages/api/src/governance/PolicyChangeApprovalService.ts)). Only then is the policy file written. If the file were written first, a failure could leave a changed policy with no approval record.
 
 **A rejection** writes no approval record and leaves the policy file as it was.
+
+## Open points
+
+- The contents of an approval record, and how it is signed. `PolicyChangeCrypto` was not read. ([05-policy-governance OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/05-policy-governance/OPEN.md))
+- The step-up envelope's exact fields, and its expiry rule. The verifier's class comment was read only in part. ([05-policy-governance OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/05-policy-governance/OPEN.md))

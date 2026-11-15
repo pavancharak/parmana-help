@@ -20,3 +20,11 @@ Each refusal below stops a request. Where an audit event is listed, it is writte
 - How errors become status codes: [`error-handler.ts`](https://github.com/pavancharak/parmana-core/blob/509a47e5/packages/api/src/middleware/error-handler.ts).
 
 The tenant refusal writes no audit event. The code does not say why.
+
+## Open points
+
+- The full list of audit event types, and what each records. `CallerAuditSink` was not read in full. ([07-refusals OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/07-refusals-and-audit/OPEN.md))
+- The store that holds refusal records. Their fields are known; the store was not read. ([07-refusals OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/07-refusals-and-audit/OPEN.md))
+- Whether a refusal at execute, such as a gateway refusal, writes a refusal record. The gateway's `recordRefusal` was read; the record it writes was not. ([07-refusals OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/07-refusals-and-audit/OPEN.md))
+- The reason a tenant refusal writes no audit event. The code does not state it. ([07-refusals OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/07-refusals-and-audit/OPEN.md))
+- The HTTP status for a refusal at execute that is not in the table. The error handler was not read in full. ([07-refusals OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/07-refusals-and-audit/OPEN.md))

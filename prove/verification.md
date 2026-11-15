@@ -12,3 +12,11 @@ The checks:
 4. **Chain integrity.** Each chain-protected execution's hash and signature must verify, and each `previousChainHash` must match its predecessor. Executions before the first chained one, with no chain fields, are legacy data and do not fail this check.
 
 **Hybrid signatures.** When a record carries a `signatures` array, the signature check verifies every entry, and each must pass. The method is [`VerificationCrypto.ts`](https://github.com/pavancharak/parmana-core/blob/509a47e5/packages/crypto/src/VerificationCrypto.ts). If the array is removed, only the legacy signature is checked, unless `HYBRID_SIGNATURE_REQUIRED=true` is set. The setting is off by default.
+
+## Open points
+
+- The HTTP status for a failed receipt. The error handler was not read for `ReceiptGenerationError`. ([04-prove OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/04-prove/OPEN.md))
+- Whether a `FAILED` verification is visible to a caller other than in the record. ([04-prove OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/04-prove/OPEN.md))
+- What `executions` and `overrides` contain. Their writers are located; what each writes was not read. ([04-prove OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/04-prove/OPEN.md))
+- The reasons for `createdAt`, `updatedAt` and `evidenceAnchor`. Their comments were not read. ([04-prove OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/04-prove/OPEN.md))
+- How a verifier outside Parmana checks a record without Parmana's storage. This is a target, and it is not built. ([04-prove OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/04-prove/OPEN.md))

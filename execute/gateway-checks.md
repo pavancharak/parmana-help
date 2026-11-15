@@ -20,3 +20,9 @@ The gateway is [`ExecutionGateway.ts`](https://github.com/pavancharak/parmana-co
 14. **Nonce.** Must be unseen, then consumed. Consumed last, and only when checks 1 to 13 pass. A forged or mismatched request does not use up a nonce.
 
 **A refusal before the connector runs** is recorded against the nonce, so the outcome is not reported as unknown.
+
+## Open points
+
+- The release path when execution control is not configured. Only part of it was read. ([03-execute OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/03-execute/OPEN.md))
+- How a retry after a lost response is recovered, and which outcome is recorded (`executionOutcomeStore`). Not read. ([03-execute OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/03-execute/OPEN.md))
+- Whether the verification-key scope check (check 12) and the revocation check (check 13) are mandatory in every deployment, or only when their inputs are configured. Not probed in the deployment configuration. ([03-execute OPEN](https://github.com/pavancharak/finalflowparmana/blob/main/03-execute/OPEN.md))

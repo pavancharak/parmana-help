@@ -49,3 +49,6 @@ Each source link is checked against its commit before a page is published.
   - [Refusals and the audit events they write](refusals/refusal-table.md)
 - **Govern**
   - [Proposing and approving a policy change](govern/proposal-and-approval.md)
+
+- **Open points**
+  - [Questions the code does not settle yet](open-points.md)
